@@ -27,8 +27,3 @@ sudo ln -s /swift/5.7.3/usr/bin/swift /usr/bin/swift
 
 echo "Borrando remanentes"
 sudo rm -r $release
-
-
-
-
-
