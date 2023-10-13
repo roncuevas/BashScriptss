@@ -1,6 +1,7 @@
 #!/bin/bash
 
-release="swift-5.7.3-RELEASE-ubuntu22.04.tar.gz"
+version="5.8.1"
+folder="swift-5.8.1-RELEASE-ubuntu22.04"
 
 echo "Ejecutando apt-get update..."
 sudo apt-get update
@@ -15,15 +16,15 @@ echo "Instalando dependencias..."
 sudo apt-get install clang libicu-dev
 
 echo "Descargando Swift"
-wget https://download.swift.org/swift-5.8.1-release/ubuntu2204/swift-5.8.1-RELEASE/swift-5.8.1-RELEASE-ubuntu22.04.tar.gz
+wget https://download.swift.org/swift-$version-release/ubuntu2204/swift-5.8.1-RELEASE/$folder.tar.gz
 
 echo "Moviendo carpetas"
-tar -xf $release
+tar -xf $folder
 sudo mkdir /swift
-sudo mv swift-5.8.1-RELEASE-ubuntu22.04 /swift/5.8.1
+sudo mv $folder /swift/$version
 
 echo "Agregando al PATH"
-sudo ln -s /swift/5.8.1/usr/bin/swift /usr/bin/swift
+sudo ln -s /swift/$version/usr/bin/swift /usr/bin/swift
 
 echo "Borrando remanentes"
-sudo rm -r $release
+sudo rm -r $folder
