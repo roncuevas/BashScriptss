@@ -30,4 +30,4 @@ echo "Agregando al PATH"
 sudo ln -s /swift/$version/usr/bin/swift /usr/bin/swift
 
 echo "Borrando remanentes"
-sudo rm -r $folder
+sudo rm -r $folder.tar.gz
