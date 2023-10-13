@@ -23,6 +23,9 @@ tar -xf $folder.tar.gz
 sudo mkdir /swift
 sudo mv $folder /swift/$version
 
+echo "Borrando versiones previas"
+sudo rm -r /usr/bin/swift
+
 echo "Agregando al PATH"
 sudo ln -s /swift/$version/usr/bin/swift /usr/bin/swift
 
