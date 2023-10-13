@@ -19,7 +19,7 @@ echo "Descargando Swift"
 wget https://download.swift.org/swift-$version-release/ubuntu2204/swift-5.8.1-RELEASE/$folder.tar.gz
 
 echo "Moviendo carpetas"
-tar -xf $folder
+tar -xf $folder.tar.gz
 sudo mkdir /swift
 sudo mv $folder /swift/$version
 
